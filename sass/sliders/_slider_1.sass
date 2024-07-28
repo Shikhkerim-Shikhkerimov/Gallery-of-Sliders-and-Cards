@@ -1,8 +1,7 @@
-.containers
-    position: absolute
-    width: 100vw
+.slider1-wraper
+    position: relative
+    width: 100%
     height: 100vh
-    overflow: hidden
     display: flex
     justify-content: center
     align-items: center
@@ -10,7 +9,7 @@
 // слайдер
 .slider
     position: absolute
-    inset: 8rem 20rem 8rem 8rem
+    inset: 8rem 20rem 8rem 0
     background-color: #ccc
     border-radius: 2rem
 
@@ -41,9 +40,9 @@
         width: 100%
         height: 100%
     &:nth-child(3)
-        left: calc( 50% + 50rem )
+        left: calc( 50% + 45rem )
     &:nth-child(4)
-        left: calc( 50% + 76rem )
+        left: calc( 50% + 71rem )
     &:nth-child(5)
         left: calc( 50% + 102rem )
 

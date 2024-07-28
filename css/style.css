@@ -9,17 +9,50 @@ html {
 
 .container {
   max-width: 1440px;
-  padding: 0 1rem;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid red;
 }
 
-.containers {
-  position: absolute;
-  width: 100vw;
+.navMenu {
+  width: 100%;
+  background: rgba(17, 17, 17, 0.851);
+  position: fixed;
+  z-index: 555;
+}
+.navMenu__wrapper {
+  display: flex;
+  padding: 1.5rem 1.2rem;
+  align-items: center;
+}
+.navMenu__logo {
+  width: 18rem;
+}
+.navMenu__logo img {
+  width: 100%;
+}
+.navMenu__list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.navMenu__link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7019607843);
+  transition: 0.5s;
+}
+.navMenu__link:hover {
+  color: #fff;
+}
+
+.slider1-wraper {
+  position: relative;
+  width: 100%;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,7 +60,7 @@ html {
 
 .slider {
   position: absolute;
-  inset: 8rem 20rem 8rem 8rem;
+  inset: 8rem 20rem 8rem 0;
   background-color: #ccc;
   border-radius: 2rem;
 }
@@ -61,10 +94,10 @@ html {
   height: 100%;
 }
 .slides:nth-child(3) {
-  left: calc(50% + 50rem);
+  left: calc(50% + 45rem);
 }
 .slides:nth-child(4) {
-  left: calc(50% + 76rem);
+  left: calc(50% + 71rem);
 }
 .slides:nth-child(5) {
   left: calc(50% + 102rem);
