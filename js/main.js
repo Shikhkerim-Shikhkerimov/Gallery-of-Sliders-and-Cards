@@ -1,3 +1,4 @@
+// слайдер 1
 let prev = document.querySelector(".slider1__prev")
 let next = document.querySelector(".slider1__next")
 let slider = document.querySelector(".slider1__slider")
@@ -13,3 +14,5 @@ next.addEventListener("click", function() {
     slider.prepend(slides[slides.length - 1])
     console.log(slider);
 })
+
+// слайдер 1

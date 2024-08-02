@@ -11,6 +11,7 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
+  border: 1px solid red;
 }
 
 .title-h2 {
@@ -107,9 +108,6 @@ html {
   border-radius: 2rem;
   transition: 0.5s;
   box-shadow: 0 2.5rem 5rem rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
 }
 .slider1__slides img {
   width: 100%;
@@ -178,9 +176,8 @@ html {
   color: white;
   max-width: 50rem;
   transition: 0.25s;
-  transition-delay: 0s;
   transform: translateY(6rem);
-  z-index: 5555;
+  z-index: 55;
   opacity: 0;
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
@@ -194,4 +191,75 @@ html {
   opacity: 1;
   transform: translateY(4rem);
   transition-delay: 0.5s;
+}
+
+.slider2 {
+  border: 5px solid black;
+  padding-top: 10rem;
+}
+.slider2__wraper {
+  border: 2px solid blue;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+.slider2__slides {
+  border: 2px solid red;
+  width: 10rem;
+  height: 50rem;
+  border-radius: 20rem;
+  background: url("../img/slider-2/img-2.jpg") center/cover no-repeat;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  position: relative;
+}
+.slider2__content {
+  display: none;
+  color: red;
+}
+.slider2__content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: #2c2c2c;
+  width: -moz-min-content;
+  width: min-content;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+}
+.slider2__btn {
+  width: 5.5rem;
+  height: 5.5rem;
+  background: #2c2c2c;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+.slider2__btn:hover {
+  background: rgba(44, 44, 44, 0.7843137255);
+}
+
+.slidesActive {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.btnActive {
+  position: static;
+}
+
+.contentActive {
+  display: block;
 }
