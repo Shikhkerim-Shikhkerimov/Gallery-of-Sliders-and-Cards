@@ -24,17 +24,16 @@ for (let value of slider2) {
 }
 
 // слайдер 3
-const swiper = new Swiper(".slider3__wrapper", {
-  loop: true,
+let slider3Prev = document.querySelector(".slider3__prev");
+let slider3next = document.querySelector(".slider3__next");
+let slider3 = document.querySelector(".slider3__slider");
 
-  // If we need pagination
-  pagination: {
-    el: ".swiper-pagination",
-  },
+slider3Prev.addEventListener("click", function () {
+  let slides = document.querySelectorAll(".slider3__slides");
+  slider3.append(slides[0]);
+});
 
-  // Navigation arrows
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+slider3next.addEventListener("click", function () {
+  let slides = document.querySelectorAll(".slider3__slides");
+  slider3.prepend(slides[slides.length - 1]);
 });
