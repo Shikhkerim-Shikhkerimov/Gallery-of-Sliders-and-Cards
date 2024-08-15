@@ -409,6 +409,7 @@ html {
   width: max-content;
   transform: rotate(45deg);
   transition: transform 1s;
+  width: calc(var(--radius) * 2);
 }
 .slider4__slides img {
   width: 48rem;
@@ -507,12 +508,20 @@ html {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  --rotate: 50deg;
+  transform: translate(-50%, -50%) rotate(var(--rotate));
   text-transform: uppercase;
   font-family: "Poppins";
   font-size: 1.3rem;
+  animation: circleRotate 20s linear infinite;
+  display: block;
 }
 
+@keyframes circleRotate {
+  to {
+    transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg));
+  }
+}
 :root {
   --radius: calc(100vw / 6);
 }

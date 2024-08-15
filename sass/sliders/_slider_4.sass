@@ -14,6 +14,7 @@
         width: max-content
         transform: rotate(45deg)
         transition: transform 1s
+        width: calc(var(--radius) * 2)
         img
             width: 48rem
             height: 48rem
@@ -82,26 +83,32 @@
                 background:  #eee
                 color: #17232A
     &__circle
-        pointer-events: none 
+        pointer-events: none
         position: absolute
         top: 0
         left: 0
         width: 100%
         height: 100%
         color: #fff
-        mask: radial-gradient(var(--radius), #0000 98%, #000) 
+        mask: radial-gradient(var(--radius), #0000 98%, #000)
         backdrop-filter: blur(10px)
-        background: radial-gradient( calc(var(--radius) + 1px), #eee5 100%, #eee2) 
+        background: radial-gradient( calc(var(--radius) + 1px), #eee5 100%, #eee2)
         span
-            height: calc(var(--radius) * 2 + 50px) 
+            height: calc(var(--radius) * 2 + 50px)
             position: absolute
             top: 50%
             left: 50%
-            transform: translate(-50%, -50%)
+            --rotate: 50deg
+            transform: translate(-50%, -50%) rotate(var(--rotate))
             text-transform: uppercase
             font-family: "Poppins"
             font-size: 1.3rem
+            animation: circleRotate 20s linear infinite
+            display: block
 
+@keyframes circleRotate
+    to
+        transform: translate(-50%, -50%) rotate(calc(var(--rotate) + 360deg))
 
-:root 
+:root
     --radius: calc(100vw / 6)
