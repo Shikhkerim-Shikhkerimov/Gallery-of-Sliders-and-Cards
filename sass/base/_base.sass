@@ -10,6 +10,7 @@ html
     max-width: 1440px
     margin: 0 auto
     overflow: hidden
+    border: 1px solid red
 
 // заголовок h2
 .title-h2
@@ -17,3 +18,33 @@ html
     font-size: 5rem
     font-weight: 700
     margin-bottom: 6rem
+
+// кнопка для переключения на слайдер / карточку
+.hoverBtn
+    width: 100%
+    height: 0%
+    background: #eee5
+    backdrop-filter: blur(5px)
+    border-top-left-radius: 10px
+    border-top-right-radius: 10px
+    position: absolute
+    bottom: 0
+    left: 0
+    z-index: 5
+    opacity: 0
+    transition: all .5s
+    a
+        text-decoration: none
+        background: #A4D65E
+        font-size: 2rem
+        font-weight: 600
+        letter-spacing: 1px
+        text-decoration: none
+        color: #000
+        border-radius: 5px
+        padding: 10px 20px
+        cursor: pointer
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)

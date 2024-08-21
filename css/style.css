@@ -13,6 +13,7 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
+  border: 1px solid red;
 }
 
 .title-h2 {
@@ -20,6 +21,38 @@ html {
   font-size: 5rem;
   font-weight: 700;
   margin-bottom: 6rem;
+}
+
+.hoverBtn {
+  width: 100%;
+  height: 0%;
+  background: rgba(238, 238, 238, 0.3333333333);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+  transition: all 0.5s;
+}
+.hoverBtn a {
+  text-decoration: none;
+  background: #A4D65E;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .navMenu {
@@ -80,7 +113,7 @@ html {
   font-size: 2.4rem;
   font-weight: 400;
   line-height: 32px;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
 }
 .headerSection__btns {
   display: flex;
@@ -109,16 +142,15 @@ html {
   grid-gap: 0.5rem;
 }
 .sectionSliders__slider {
-  background: red;
-  border: 3px solid;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.sectionSliders__slider:nth-child(1) {
   grid-column: 1/4;
   grid-row: 1/11;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .sectionSliders__slider:nth-child(2) {
-  background: blue;
   grid-column: 1/4;
   grid-row: 11/-1;
 }
@@ -149,7 +181,19 @@ html {
 }
 .sectionSliders__slider img {
   width: 100%;
-  border: 3px solid red;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+.sectionSliders__slider:hover img {
+  transform: scale(1.1);
+  filter: blur(3px);
+}
+
+.sectionSliders__slider:hover .hoverBtn {
+  opacity: 1;
+  height: 50%;
 }
 
 .sectionСards {
@@ -162,13 +206,14 @@ html {
   grid-gap: 0.5rem;
 }
 .sectionСards__card {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
   background: red;
-  border: 3px solid;
+}
+.sectionСards__card:nth-child(1) {
   grid-column: 1/5;
   grid-row: 1/11;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .sectionСards__card:nth-child(2) {
   background: blue;
@@ -199,6 +244,22 @@ html {
   background: #135b02;
   grid-column: 9/-1;
   grid-row: 11/-1;
+}
+.sectionСards__card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+.sectionСards__card:hover img {
+  transform: scale(1.1);
+  filter: blur(3px);
+}
+
+.sectionСards__card:hover .hoverBtn {
+  opacity: 1;
+  height: 50%;
 }
 
 .slider1 {
