@@ -211,51 +211,50 @@ html {
   width: 100%;
   overflow: hidden;
   position: relative;
-  background: red;
+  background: linear-gradient(transparent, #1c1c1c 58%);
 }
 .sectionСards__card:nth-child(1) {
   grid-column: 1/5;
   grid-row: 1/11;
 }
 .sectionСards__card:nth-child(2) {
-  background: blue;
   grid-column: 1/4;
   grid-row: 11/-1;
 }
 .sectionСards__card:nth-child(3) {
-  background: green;
   grid-column: 5/8;
   grid-row: 1/11;
 }
 .sectionСards__card:nth-child(4) {
-  background: black;
   grid-column: 4/6;
   grid-row: 11/-1;
 }
 .sectionСards__card:nth-child(5) {
-  background: #16f7a5;
   grid-column: 8/-1;
   grid-row: 1/11;
 }
 .sectionСards__card:nth-child(6) {
-  background: #064d43;
   grid-column: 6/9;
   grid-row: 11/-1;
 }
 .sectionСards__card:nth-child(7) {
-  background: #135b02;
   grid-column: 9/-1;
   grid-row: 11/-1;
 }
 .sectionСards__card img {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: all 0.3s;
 }
 .sectionСards__card:hover img {
   transform: scale(1.1);
+  transform: translate(-50%, -50%);
   filter: blur(3px);
 }
 
@@ -863,4 +862,75 @@ html {
 }
 .btn:active {
   transform: translateY(-0.1rem);
+}
+
+.card2 {
+  padding: 15rem 2rem 2rem;
+}
+.card2__wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+.card2__box {
+  width: 34rem;
+  height: 52rem;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.card2__box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s;
+}
+.card2__box:hover img {
+  transform: scale(1.2);
+}
+.card2__box:hover .card2__content {
+  height: 100%;
+}
+.card2__content {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(transparent, #1c1c1c 58%);
+  border-radius: 10px;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 0.2rem;
+  line-height: 120%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  padding: 0 4rem;
+  font-size: 1.4rem;
+  color: #fff;
+  transition: height 0.5s;
+}
+.card2__content h3 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  margin-top: 80%;
+}
+.card2__content p {
+  margin-bottom: 2rem;
+}
+.card2__content button {
+  color: #262626;
+  text-decoration: none;
+  font-size: 1.8rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 5rem;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.card2__content button:hover {
+  transform: scale(1.1);
 }
