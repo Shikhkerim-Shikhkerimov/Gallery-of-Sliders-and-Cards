@@ -934,3 +934,65 @@ html {
 .card2__content button:hover {
   transform: scale(1.1);
 }
+
+.card3 {
+  padding: 15rem 2rem 2rem;
+  height: 80rem;
+}
+.card3__wrapper {
+  height: 100%;
+  padding-top: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+}
+.card3__box {
+  width: 30rem;
+  height: 22rem;
+  position: relative;
+  background-color: #fff;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.card3__box:hover {
+  height: 43rem;
+}
+.card3__img {
+  position: absolute;
+  width: 26rem;
+  height: 26rem;
+  top: -6rem;
+  left: 2rem;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.card3__img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.card3__content {
+  margin-top: -14rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.3rem;
+  line-height: 130%;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.card3__content h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.card3__box:hover .card3__content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 20rem;
+  transition-delay: 0.3s;
+}
