@@ -10,7 +10,6 @@ html
     max-width: 1440px
     margin: 0 auto
     overflow: hidden
-    border: 1px solid red
 
 // заголовок h2
 .title-h2
@@ -48,3 +47,20 @@ html
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
+
+// кнопки Слайдер и Карточки
+.btns
+    display: flex
+    justify-content: space-evenly
+    gap: 10rem
+    &__btn
+        border: none
+        background: #A4D65E
+        font-size: 2.4rem
+        font-weight: 600
+        letter-spacing: 1px
+        text-decoration: none
+        color: #000
+        border-radius: 5px
+        padding: 10px 20px
+        cursor: pointer
