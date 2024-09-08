@@ -1037,3 +1037,130 @@ html {
   margin-top: 22rem;
   transition-delay: 0.3s;
 }
+
+.card4 {
+  padding: 15rem 2rem 2rem;
+  height: 100rem;
+}
+.card4__wrapper {
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 7rem;
+}
+.card4__box {
+  position: relative;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+}
+.card4__profile {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #d9c59e;
+  cursor: pointer;
+  z-index: 1;
+  transition: opacity 0.4s, transform 0.4s;
+}
+.card4__profile:hover {
+  transform: scale(0.8);
+  opacity: 0.7;
+}
+.card4__profile img {
+  width: 100%;
+}
+.card4__tooltip {
+  position: absolute;
+  bottom: -2rem;
+  padding-bottom: 5rem;
+  transition: opacity 0.4s, bottom 0.4s cubic-bezier(0.6, -0.5, 0.3, 1.5);
+  pointer-events: none;
+  opacity: 0;
+}
+.card4__box:hover .card4__tooltip {
+  opacity: 1;
+  pointer-events: initial;
+  bottom: 6.5rem;
+}
+.card4__content {
+  position: relative;
+  width: 30rem;
+  background-color: #d9c59e;
+  box-shadow: 0 16px 32px hsla(230, 50%, 20%, 0.1);
+  padding: 2rem 1.5rem;
+  border-radius: 1.5rem;
+}
+.card4__content::after {
+  content: "";
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #d9c59e;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.75rem;
+  margin-inline: auto;
+  border-radius: 0.25rem;
+  rotate: 45deg;
+}
+.card4__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid hsl(230, 4%, 92%);
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.card4__social {
+  display: flex;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+}
+.card4__link {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+}
+.card4__link img {
+  width: 100%;
+}
+.card4__data {
+  text-align: center;
+}
+.card4__img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+}
+.card4__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card4__name {
+  font-size: 1.25rem;
+  color: hsl(230, 24%, 12%);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.card4__profession {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.card4__btn {
+  width: 4rem;
+  height: 4rem;
+  display: inline-flex;
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
+  color: hsl(230, 100%, 50%);
+  font-weight: 500;
+}
+.card4__btn img {
+  width: 100%;
+}
