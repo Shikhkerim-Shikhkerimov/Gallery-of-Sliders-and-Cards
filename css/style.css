@@ -16,7 +16,6 @@ html {
   max-width: 1440px;
   margin: 0 auto;
   overflow: hidden;
-  border: 1px solid red;
 }
 
 .title-h2 {
@@ -1040,13 +1039,12 @@ html {
 
 .card4 {
   padding: 15rem 2rem 2rem;
-  height: 100rem;
 }
 .card4__wrapper {
-  display: grid;
-  place-items: center;
-  margin-inline: 1.5rem;
-  padding-block: 7rem;
+  height: 62vh;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5rem;
 }
 .card4__box {
   position: relative;
@@ -1078,11 +1076,12 @@ html {
   transition: opacity 0.4s, bottom 0.4s cubic-bezier(0.6, -0.5, 0.3, 1.5);
   pointer-events: none;
   opacity: 0;
+  font-family: "Syne", sans-serif;
 }
 .card4__box:hover .card4__tooltip {
   opacity: 1;
   pointer-events: initial;
-  bottom: 6.5rem;
+  bottom: 8.8rem;
 }
 .card4__content {
   position: relative;
@@ -1100,7 +1099,7 @@ html {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -0.75rem;
+  bottom: -1.5rem;
   margin-inline: auto;
   border-radius: 0.25rem;
   rotate: 45deg;
@@ -1113,6 +1112,9 @@ html {
   padding-bottom: 1.5rem;
   margin-bottom: 1.5rem;
 }
+.card4__header h3 {
+  font-size: 1.4rem;
+}
 .card4__social {
   display: flex;
   -moz-column-gap: 0.75rem;
@@ -1120,8 +1122,12 @@ html {
 }
 .card4__link {
   display: inline-block;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
+  transition: transform 0.4s;
+}
+.card4__link:hover {
+  transform: scale(1.1);
 }
 .card4__link img {
   width: 100%;
@@ -1134,7 +1140,7 @@ html {
   height: 10rem;
   border-radius: 50%;
   overflow: hidden;
-  margin: 0 auto 1rem;
+  margin: 0 auto 1.5rem;
 }
 .card4__img img {
   width: 100%;
@@ -1142,25 +1148,35 @@ html {
      object-fit: cover;
 }
 .card4__name {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: hsl(230, 24%, 12%);
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 1rem;
 }
 .card4__profession {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   margin-bottom: 2rem;
 }
 .card4__btn {
-  width: 4rem;
-  height: 4rem;
+  width: 100%;
   display: inline-flex;
-  -moz-column-gap: 0.5rem;
-       column-gap: 0.5rem;
-  color: hsl(230, 100%, 50%);
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 1.1rem;
+       column-gap: 1.1rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #0049E6;
   font-weight: 500;
 }
 .card4__btn img {
-  width: 100%;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+.card4__btn span {
+  transition: transform 0.4s;
+}
+.card4__btn span:hover {
+  transform: scale(1.1);
 }
